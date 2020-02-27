@@ -1,0 +1,7 @@
+[user]
+	name = Sean Cheng
+	email = blackhorseya@gmail.com
+[pull]
+	rebase = true
+[core]
+	excludesfile = /Users/doggy/.gitignore
