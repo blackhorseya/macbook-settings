@@ -1,0 +1,20 @@
+# Path
+export PATH=/usr/local/sbin:$PATH
+
+# Go
+export GOPATH=~/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export GO111MODULE=on
+
+# Etcd
+export ETCDCTL_API=3
+
+# Editor
+export EDITOR=vim
+
+# Python
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
+
+# Latex
+export PATH=/Library/TeX/texbin:$PATH
+
