@@ -114,7 +114,7 @@ antigen apply
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 [ -f ~/.zsh_env ] && source ~/.zsh_env
 [ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
 
