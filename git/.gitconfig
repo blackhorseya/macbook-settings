@@ -5,3 +5,13 @@
 	rebase = true
 [core]
 	excludesfile = /Users/doggy/.gitignore
+[commit]
+	gpgSign = false
+[gui]
+	pruneduringfetch = true
+[smartgit "submodule"]
+	fetchalways = false
+	update = true
+	initializenew = true
+[push]
+	recurseSubmodules = on-demand

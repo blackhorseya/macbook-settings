@@ -39,6 +39,7 @@ antigen bundle rsync
 antigen bundle golang
 antigen bundle terraform
 antigen bundle kubectl
+antigen bundle gcloud
 
 antigen bundle ssh-agent
 antigen bundle zsh-users/zsh-autosuggestions

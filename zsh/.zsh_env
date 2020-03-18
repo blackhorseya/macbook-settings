@@ -18,3 +18,6 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 # Latex
 export PATH=/Library/TeX/texbin:$PATH
 
+# google cloud
+GOOGLE_APPLICATION_CREDENTIALS=/home/doggy/.gcloud/credential.json
+
