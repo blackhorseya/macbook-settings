@@ -1,6 +1,7 @@
 # tool aliases
 alias cat=bat
 alias nano=vim
+alias tf=terraform
 
 # quick open rc
 alias vimrc='${=EDITOR} ~/.vimrc'

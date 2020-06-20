@@ -1,5 +1,8 @@
+# arcanist
+export ARC_HOME=/usr/local/arc/arcanist
+
 # Path
-export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/sbin:$PATH:$ARC_HOME/bin
 
 # Go
 export GOPATH=~/go
@@ -19,5 +22,5 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 export PATH=/Library/TeX/texbin:$PATH
 
 # google cloud
-GOOGLE_APPLICATION_CREDENTIALS=/home/doggy/.gcloud/credential.json
+export GOOGLE_APPLICATION_CREDENTIALS=/home/doggy/.gcloud/credential.json
 
