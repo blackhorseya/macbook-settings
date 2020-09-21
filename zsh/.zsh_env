@@ -22,5 +22,5 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 export PATH=/Library/TeX/texbin:$PATH
 
 # google cloud
-export GOOGLE_APPLICATION_CREDENTIALS=/home/doggy/.gcloud/credential.json
+unset GOOGLE_APPLICATION_CREDENTIALS
 
