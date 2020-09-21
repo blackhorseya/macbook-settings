@@ -9,8 +9,6 @@
 
 """Lightweight HTTP library with a requests-like interface."""
 
-from __future__ import absolute_import, print_function
-
 import codecs
 import json
 import mimetypes
@@ -25,10 +23,8 @@ import urllib2
 import urlparse
 import zlib
 
-__version__ = open(os.path.join(os.path.dirname(__file__), 'version')).read()
 
-USER_AGENT = (u'Alfred-Workflow/' + __version__ +
-              ' (+http://www.deanishe.net/alfred-workflow)')
+USER_AGENT = u'Alfred-Workflow/1.36 (+http://www.deanishe.net/alfred-workflow)'
 
 # Valid characters for multipart form data boundaries
 BOUNDARY_CHARS = string.digits + string.ascii_letters
@@ -182,18 +178,6 @@ class CaseInsensitiveDictionary(dict):
             yield v['val']
 
 
-class Request(urllib2.Request):
-    """Subclass of :class:`urllib2.Request` that supports custom methods."""
-
-    def __init__(self, *args, **kwargs):
-        """Create a new :class:`Request`."""
-        self._method = kwargs.pop('method', None)
-        urllib2.Request.__init__(self, *args, **kwargs)
-
-    def get_method(self):
-        return self._method.upper()
-
-
 class Response(object):
     """
     Returned by :func:`request` / :func:`get` / :func:`post` functions.
@@ -216,7 +200,7 @@ class Response(object):
     def __init__(self, request, stream=False):
         """Call `request` with :mod:`urllib2` and process results.
 
-        :param request: :class:`Request` instance
+        :param request: :class:`urllib2.Request` instance
         :param stream: Whether to stream response or retrieve it all at once
         :type stream: bool
 
@@ -528,7 +512,7 @@ def request(method, url, params=None, data=None, headers=None, cookies=None,
     socket.setdefaulttimeout(timeout)
 
     # Default handlers
-    openers = [urllib2.ProxyHandler(urllib2.getproxies())]
+    openers = []
 
     if not allow_redirects:
         openers.append(NoRedirectHandler())
@@ -560,6 +544,10 @@ def request(method, url, params=None, data=None, headers=None, cookies=None,
 
     headers['accept-encoding'] = ', '.join(encodings)
 
+    # Force POST by providing an empty data string
+    if method == 'POST' and not data:
+        data = ''
+
     if files:
         if not data:
             data = {}
@@ -587,7 +575,7 @@ def request(method, url, params=None, data=None, headers=None, cookies=None,
         query = urllib.urlencode(str_dict(params), doseq=True)
         url = urlparse.urlunsplit((scheme, netloc, path, query, fragment))
 
-    req = Request(url, data, headers, method=method)
+    req = urllib2.Request(url, data, headers)
     return Response(req, stream)
 
 
@@ -603,18 +591,6 @@ def get(url, params=None, headers=None, cookies=None, auth=None,
                    stream=stream)
 
 
-def delete(url, params=None, data=None, headers=None, cookies=None, auth=None,
-           timeout=60, allow_redirects=True, stream=False):
-    """Initiate a DELETE request. Arguments as for :func:`request`.
-
-    :returns: :class:`Response` instance
-
-    """
-    return request('DELETE', url, params, data, headers=headers,
-                   cookies=cookies, auth=auth, timeout=timeout,
-                   allow_redirects=allow_redirects, stream=stream)
-
-
 def post(url, params=None, data=None, headers=None, cookies=None, files=None,
          auth=None, timeout=60, allow_redirects=False, stream=False):
     """Initiate a POST request. Arguments as for :func:`request`.
@@ -623,17 +599,6 @@ def post(url, params=None, data=None, headers=None, cookies=None, files=None,
 
     """
     return request('POST', url, params, data, headers, cookies, files, auth,
-                   timeout, allow_redirects, stream)
-
-
-def put(url, params=None, data=None, headers=None, cookies=None, files=None,
-        auth=None, timeout=60, allow_redirects=False, stream=False):
-    """Initiate a PUT request. Arguments as for :func:`request`.
-
-    :returns: :class:`Response` instance
-
-    """
-    return request('PUT', url, params, data, headers, cookies, files, auth,
                    timeout, allow_redirects, stream)
 
 

@@ -102,7 +102,10 @@ def _job_pid(name):
         if _process_exists(pid):
             return pid
 
-    os.unlink(pidfile)
+    try:
+        os.unlink(pidfile)
+    except Exception:  # pragma: no cover
+        pass
 
 
 def is_running(name):
