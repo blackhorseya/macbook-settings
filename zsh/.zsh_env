@@ -24,3 +24,6 @@ export PATH=/Library/TeX/texbin:$PATH
 # google cloud
 unset GOOGLE_APPLICATION_CREDENTIALS
 
+# kubernetes
+export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
+
