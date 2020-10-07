@@ -27,3 +27,6 @@ unset GOOGLE_APPLICATION_CREDENTIALS
 # kubernetes
 export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
 
+# Language
+export LANG=en_US.UTF-8
+
