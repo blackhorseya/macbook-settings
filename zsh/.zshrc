@@ -91,3 +91,6 @@ set -o ignoreeof
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+
+# added by travis gem
+[ ! -s /Users/doggy/.travis/travis.sh ] || source /Users/doggy/.travis/travis.sh
