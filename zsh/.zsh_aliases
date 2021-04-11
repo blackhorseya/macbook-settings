@@ -7,3 +7,7 @@ alias tf=terraform
 alias vimrc='${=EDITOR} ~/.vimrc'
 alias myclirc='${=EDITOR} ~/.myclirc'
 
+alias lb='docker run --rm \
+    -v "$PWD:$PWD" \
+    -w="$PWD" \
+    lobster-cli:latest'

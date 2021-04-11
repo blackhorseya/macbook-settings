@@ -7,7 +7,7 @@ export PATH=/usr/local/sbin:$PATH:$ARC_HOME/bin
 # Go
 export GOPATH=~/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export GO111MODULE=on
+export GO111MODULE=auto
 
 # Etcd
 export ETCDCTL_API=3
