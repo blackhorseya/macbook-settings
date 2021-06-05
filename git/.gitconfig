@@ -1,6 +1,3 @@
-[user]
-	name = Sean Cheng
-	email = blackhorseya@gmail.com
 [pull]
 	rebase = true
 [core]
@@ -16,3 +13,6 @@
 	initializenew = true
 [push]
 	recurseSubmodules = on-demand
+[url "git@github.com:HeliosData/"]
+	insteadOf = https://github.com/HeliosData/
+
