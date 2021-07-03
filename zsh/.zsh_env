@@ -1,8 +1,11 @@
 # arcanist
 export ARC_HOME=/usr/local/arc/arcanist
 
+# sphinx
+export SPHINX_HOME=/usr/local/opt/sphinx-doc
+
 # Path
-export PATH=/usr/local/sbin:$PATH:$ARC_HOME/bin
+export PATH=/usr/local/sbin:$PATH:$ARC_HOME/bin:$SPHINX_HOME/bin
 
 # Go
 export GOPATH=~/go
