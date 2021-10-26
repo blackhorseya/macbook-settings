@@ -19,7 +19,7 @@ export ETCDCTL_API=3
 export EDITOR=vim
 
 # Python
-export PATH=/usr/local/opt/python/libexec/bin:$PATH
+export PATH=/usr/local/opt/python/libexec/bin:/Users/doggy/Library/Python/3.8/bin:$HOME/.poetry/bin:$PATH
 
 # Latex
 export PATH=/Library/TeX/texbin:$PATH

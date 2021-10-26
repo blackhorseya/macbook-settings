@@ -23,7 +23,7 @@ antigen use oh-my-zsh
 antigen theme romkatv/powerlevel10k
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE="nerdfont-complete"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh context kubecontext dir dir_writable newline os_icon vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh context kubecontext dir dir_writable newline os_icon virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(public_ip time)
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
@@ -44,6 +44,8 @@ antigen bundle golang
 antigen bundle terraform
 antigen bundle kubectl
 antigen bundle gcloud
+antigen bundle virtualenv
+antigen bundle poetry
 
 antigen bundle ssh-agent
 antigen bundle zsh-users/zsh-autosuggestions
@@ -96,3 +98,5 @@ bindkey '^[[B' history-substring-search-down
 [ ! -s /Users/doggy/.travis/travis.sh ] || source /Users/doggy/.travis/travis.sh
 GOPATH=${HOME}/go
 PATH=${PATH}:${GOPATH}/bin
+
+export PATH="$HOME/.poetry/bin:$PATH"
