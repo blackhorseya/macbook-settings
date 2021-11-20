@@ -13,6 +13,9 @@
 	initializenew = true
 [push]
 	recurseSubmodules = on-demand
-[url "git@github.com:HeliosData/"]
-	insteadOf = https://github.com/HeliosData/
+[url "git@github.com:hashgreen/"]
+	insteadOf = https://github.com/hashgreen/
 
+[user]
+	email = blackhorseya@gmail.com
+	name = Sean Cheng
