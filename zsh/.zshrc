@@ -27,7 +27,6 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh context kubecontext dir dir_writable newl
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(public_ip time)
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle macos
 antigen bundle brew
 antigen bundle brew-cask
 antigen bundle common-aliases
@@ -39,7 +38,6 @@ antigen bundle safe-paste
 antigen bundle docker
 antigen bundle docker-compose
 antigen bundle rsync
-antigen bundle golang
 antigen bundle terraform
 antigen bundle kubectl
 antigen bundle gcloud
@@ -52,7 +50,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
 antigen bundle unixorn/autoupdate-antigen.zshplugin
 antigen bundle zsh-users/zsh-history-substring-search
-
 antigen bundle superbrothers/zsh-kubectl-prompt
 
 # Tell antigen that you're done.
