@@ -27,7 +27,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh context kubecontext dir dir_writable newl
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(public_ip time)
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle osx
+antigen bundle macos
 antigen bundle brew
 antigen bundle brew-cask
 antigen bundle common-aliases
@@ -35,7 +35,6 @@ antigen bundle colored-man
 antigen bundle extract
 antigen bundle git
 antigen bundle gitfast
-antigen bundle git-extras
 antigen bundle safe-paste
 antigen bundle docker
 antigen bundle docker-compose
