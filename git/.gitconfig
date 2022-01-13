@@ -19,3 +19,5 @@
 [user]
 	email = blackhorseya@gmail.com
 	name = Sean Zheng
+[init]
+	defaultBranch = main
