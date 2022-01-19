@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+source /opt/homebrew/share/antigen/antigen.zsh
+
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
