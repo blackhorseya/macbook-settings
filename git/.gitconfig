@@ -1,10 +1,10 @@
 [pull]
 	rebase = true
 [core]
-	excludesfile = /Users/doggy/.gitignore
+	excludesfile = /Users/sean/.gitignore
 [commit]
 	gpgSign = false
-	template = /Users/doggy/.gitmessage.txt
+	template = /Users/sean/.gitmessage.txt
 [gui]
 	pruneduringfetch = true
 [smartgit "submodule"]
