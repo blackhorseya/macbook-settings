@@ -3,8 +3,11 @@
 
 source /opt/homebrew/share/antigen/antigen.zsh
 
-fpath=(~/.zsh/completion $fpath)
-autoload -Uz compinit && compinit -i
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit && compinit -i
+fi
 
 source <(kubectl completion zsh)
 
