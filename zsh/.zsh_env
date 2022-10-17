@@ -1,5 +1,5 @@
 # Path
-export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/sbin:/opt/homebrew/bin:$PATH
 
 # Go
 export GOPATH=~/go

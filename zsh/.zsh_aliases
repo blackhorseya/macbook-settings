@@ -7,3 +7,6 @@ alias tf=terraform
 alias vimrc='${=EDITOR} ~/.vimrc'
 alias myclirc='${=EDITOR} ~/.myclirc'
 
+# chia
+alias chia='/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon/chia'
+
