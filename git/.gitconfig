@@ -3,7 +3,7 @@
 [core]
 	excludesfile = /Users/sean/.gitignore
 [commit]
-	gpgSign = false
+	gpgSign = true
 	template = /Users/sean/.gitmessage.txt
 [gui]
 	pruneduringfetch = true
@@ -15,9 +15,17 @@
 	recurseSubmodules = on-demand
 [url "git@github.com:hashgreen/"]
 	insteadOf = https://github.com/hashgreen/
-
 [user]
 	email = blackhorseya@gmail.com
 	name = Sean Zheng
+	signingKey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDTD9Qh+SZU1VC1VdF/b3YYB9q60XWrVLpSIInEZFp8YUhd8nxjbpG3PVW4hARRHDmQuV2qil6fJz0yI+QgxJygeRsXtlToCi9wvCKFWE0gl7qVWM3EtnrL6LbNF68uZMRcGiYfeP5VMONOJqJpXPKHa2Fv/Ru4j3j0064hXC7Q/87Bz+DP1WkVAVW0NIsS+VBKZF0tg6EVf4FwGkEco3MzSVuum+IxBZt2HXhaRiWm61ejWwJiJBB+nS/HjaDN023vXIbXWDvrW3BGS00KtiZXx9GG3lV9ESsREej0UWjZfIab9fliu0Wy7yoB2qyvtSeE9hBzv5haq1CRD9E0oa1ZsacaBzbc3ENvZYv2uofHwz6QHq73vD/ZEhltQlfnRlwX6DToOt+6S/25DEb7k4POxUOeiqDAvokhneki7WXHkjUHzQIyBod66AQbX1ZTX9nOvcylE/3zDKDYUSzYACJMEkwVxudDE1aMJImp27XCf2SrWW1rLYp72+qua11IlSqXoEl7SIMaEFMpbo03DuN6+hV4xvvVsAkfe+I2p5izo3ml4eA3sMy2bOaa7N0rKvn5IPOWSf0fNPvD71baKQL4GfhkMFcpCsIj5beCZpoc502aHYRMT7QjDj4CfyH2bXwiqLE8zDMexgPnjXJeAW/Hk/N5x3LeOtA7srnm+UDhXw==
 [init]
 	defaultBranch = main
+[credential]
+	helper = osxkeychain
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[tag]
+	gpgSign = true
