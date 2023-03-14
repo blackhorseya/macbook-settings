@@ -13,13 +13,15 @@ export ETCDCTL_API=3
 export EDITOR=vim
 
 # Python
-export PATH=/usr/local/opt/python/libexec/bin:$HOME/.poetry/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # Latex
 export PATH=/Library/TeX/texbin:$PATH
 
 # google cloud
 unset GOOGLE_APPLICATION_CREDENTIALS
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+export PATH="`brew --prefix`/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH"
 
 # kubernetes
 export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
