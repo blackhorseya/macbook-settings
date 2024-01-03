@@ -10,8 +10,8 @@ if type brew &>/dev/null; then
 fi
 
 source <(kubectl completion zsh)
-
-source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 # tabtab source for packages
 # uninstall by removing these lines
@@ -49,7 +49,6 @@ antigen bundle ssh-agent
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
-antigen bundle unixorn/autoupdate-antigen.zshplugin
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle superbrothers/zsh-kubectl-prompt
 
