@@ -20,3 +20,9 @@ alias docker-compose='docker run --rm \
 alias gsync='gup && gfa && gbda'
 alias commit='codegpt commit'
 
+# openapi-generator-cli
+alias openapi-generator-cli='docker run --rm \
+                            -v "$PWD:$PWD" \
+                            -w="$PWD" \
+                            openapitools/openapi-generator-cli'
+

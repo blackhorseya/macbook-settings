@@ -13,6 +13,7 @@
 	initializenew = true
 [push]
 	recurseSubmodules = on-demand
+	autoSetupRemote = true
 [url "git@github.com:hashgreen/"]
 	insteadOf = https://github.com/hashgreen/
 [user]

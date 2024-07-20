@@ -1,5 +1,6 @@
 # Path
 export PATH=/usr/local/sbin:/opt/homebrew/bin:$PATH
+export PATH=/opt/homebrew/anaconda3/bin:$PATH
 
 # Go
 export GOPATH=~/go
