@@ -1,6 +1,4 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 source /opt/homebrew/share/antigen/antigen.zsh
 
 if type brew &>/dev/null; then
@@ -40,6 +38,7 @@ antigen bundle docker
 antigen bundle docker-compose
 antigen bundle rsync
 antigen bundle terraform
+antigen bundle terragrunt
 antigen bundle kubectl
 antigen bundle gcloud
 antigen bundle virtualenv
@@ -81,6 +80,7 @@ RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 # You may need to manually set your language environment
 [ -f ~/.zsh_env ] && source ~/.zsh_env
 [ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
+[ -f ~/.zsh_completion ] && source ~/.zsh_completion
 
 # ignore ctrl+d close session
 set -o ignoreeof
@@ -105,3 +105,19 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+if command -v ngrok &>/dev/null; then
+    eval "$(ngrok completion)"
+fi
+
+eval "$(/usr/libexec/path_helper)"
+
+export PATH="/opt/homebrew/bin:$PATH"
+ulimit -n 65535
+
+# Task Master aliases added on 7/1/2025
+alias tm='task-master'
+alias taskmaster='task-master'
+
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terragrunt terragrunt
